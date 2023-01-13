@@ -25,8 +25,8 @@ export default function Index() {
                 color="primary" 
                 component={Link}                           
         
-                href={`/api/auth/signin`}> 
-                Sign In
+                href={`/image-carousel`}> 
+                Open Image Carousel
         </Button>
       </Box>
     </Container>
