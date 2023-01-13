@@ -1,14 +1,13 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
-
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
-import theme from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
-import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
-import { blue, red, teal, cyan, grey, deepOrange } from '@mui/material/colors';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { red, grey } from '@mui/material/colors';
 import AppLayout from '@/components/layout';
+
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
@@ -44,7 +43,6 @@ export default function MyApp(props) {
           },
 
           mode: darkState? 'dark' : 'light',
-          // mode: 'dark' ,
         },
 
         // breakpoints: {

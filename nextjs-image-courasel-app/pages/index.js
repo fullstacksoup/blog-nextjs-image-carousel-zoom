@@ -2,22 +2,32 @@ import * as React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import ProTip from '../src/ProTip';
-import Link from '../src/Link';
-import Copyright from '../src/Copyright';
-
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
+import { Button } from '@mui/material';
+import Link from 'next/link';
 export default function Index() {
   return (
-    <Container maxWidth="sm">
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Next.js example
+    <Container maxWidth="md" align="center">
+      <Box sx={{ my: 4 }} >
+         <Typography variant="h3" component="h3"  gutterBottom>
+          Next.js 13 with MUI 5.11.4
         </Typography>
-        <Link href="/about" color="secondary">
-          Go to the about page
-        </Link>
-        <ProTip />
-        <Copyright />
+        <Typography variant="h5" component="h5"  gutterBottom>
+          Image Carousel
+        </Typography>
+        <Stack direction="row" spacing={1} justifyContent="center" alignItems="center" sx={{mt: 4, mb: 6}}>
+          
+          <Chip label="Material UI"  />
+          <Chip label="Pure React Carousel"  />                    
+        </Stack>
+        <Button variant="contained" 
+                color="primary" 
+                component={Link}                           
+        
+                href={`/api/auth/signin`}> 
+                Sign In
+        </Button>
       </Box>
     </Container>
   );

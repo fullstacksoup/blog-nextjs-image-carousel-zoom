@@ -173,16 +173,17 @@ export default function AppLayout(props) {
           open={open}            
         >
         <Toolbar>
+
+          <Button color="inherit" component={Link} href="/" sx={{ml: 2}}>Full Stack Soup</Button>                  
+
           <Box sx={{ flexGrow: 1 }} />
-          {/* User is NOT Authenticated */}
-      
-          {/* User is Authenticated */}
+          
             <Tooltip
                 arrow
                 title={
                   <>
                     <Typography color="inherit"><b>Image Carousel</b></Typography>
-                    {'Latest updates to the site'}
+                    {'Custom image carousel'}
                   </>
                 }>
               <Button color="inherit" component={Link} href="/image-carousel" sx={{ml: 2}}>Image Carousel</Button>                  
